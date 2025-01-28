@@ -1,0 +1,177 @@
+/* Variables de colores */
+:root {
+    --primary-color: #1c1c1c; /* Negro */
+    --secondary-color: #d1d1d1; /* Plateado */
+    --background-color: #f0f0f0; /* Gris claro */
+    --card-background: #ffffff; /* Blanco */
+    --accent-color: #a6a6a6; /* Gris oscuro */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Difuminado de fondo */
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1c1c1c, #d1d1d1);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+/* Secciones */
+section {
+    margin-bottom: 30px;
+}
+
+/* Estilo para las listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Estilo de los enlaces */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Saludo personalizado */
+.welcome {
+    margin-top: 40px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--card-background);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 25%;
+}
+
+button:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Estilo del saludo */
+#saludo {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .welcome form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input,
+    form button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+}
+
