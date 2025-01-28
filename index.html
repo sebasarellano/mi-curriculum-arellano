@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum de Sebastián Arellano</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript para manejar el saludo personalizado
+        function mostrarSaludo(event) {
+            event.preventDefault(); // Evitar recargar la página
+            const nombre = document.getElementById("nombre").value.trim();
+            if (nombre) {
+                const mensaje = `¡Bienvenido, ${nombre}! Gracias por visitar mi currículum.`;
+                document.getElementById("saludo").textContent = mensaje;
+                document.getElementById("saludo").style.display = "block"; // Mostrar el saludo
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="background-blur"></div>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="images/fotoperfil.jpg" alt="Foto de perfil" class="profile-photo">
+                <div>
+                    <h1>Sebastián Arellano</h1>
+                    <p class="subtitle">Estudiante de Ingeniería en Ciencia de Datos</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="profile">
+            <h2>Perfil</h2>
+            <p>
+                Soy un estudiante de primer semestre con interés en aprender y aplicar conocimientos en análisis de datos, programación y estadística. Me destaco por mi responsabilidad, disposición para aprender y mi entusiasmo por contribuir a proyectos que me permitan crecer profesionalmente.
+            </p>
+        </section>
+
+        <section class="education">
+            <h2>Educación</h2>
+            <ul>
+                <li><strong>Pontificia Universidad Católica del Ecuador (PUCE)</strong></li>
+                <li><strong>Carrera:</strong> Ingeniería en Ciencia de Datos</li>
+                <li><strong>Inicio:</strong> Octubre 2024</li>
+                <li><strong>Bachillerato:</strong> Unidad Educativa Saint Dominic School</li>
+                <li><strong>Año de finalización:</strong> 2024</li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Organización y puntualidad</li>
+                <li>Manejo básico de herramientas como Microsoft Office y Google Workspace</li>
+                <li>Idiomas: Español (nativo), Inglés (intermedio, nivel B2)</li>
+            </ul>
+        </section>
+
+        <section class="extracurricular">
+            <h2>Actividades Extracurriculares</h2>
+            <ul>
+                <li>Miembro del club de ciencias (2023): Organización de eventos y trabajo colaborativo.</li>
+                <li>Voluntariado en actividades comunitarias (2022): Apoyo logístico y asistencia en eventos locales.</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:sebasarellano3000@gmail.com">sebasarellano3000@gmail.com</a></p>
+            <p>Teléfono: <a href="tel:0983041227">0983041227</a></p>
+        </section>
+
+        <section class="welcome">
+            <h2>¡Gracias por visitar mi currículum!</h2>
+            <form onsubmit="mostrarSaludo(event)">
+                <label for="nombre">Ingresa tu nombre:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre aquí" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="saludo" style="display: none; font-weight: bold; margin-top: 20px;"></p>
+        </section>
+    </div>
+</body>
+</html>
+
